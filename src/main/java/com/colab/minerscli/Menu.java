@@ -63,9 +63,11 @@ public class Menu {
 
         // Create an instance of the GameBoard class
         Board board = new Board();
+        // Create an instanc of GameEngine
+        GameEngine gameEngine = new GameEngine();
 
-        // Set the players on the game board
-        board.setPlayers(player1, player2);
+        // Send the players to GameEngine
+        gameEngine.setPlayers(player1, player2);
     }
 
     public static int getInput() {

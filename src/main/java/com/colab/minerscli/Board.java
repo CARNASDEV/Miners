@@ -2,9 +2,7 @@ package com.colab.minerscli;
 
 public class Board {
 
-    //Carro: I added the player instances as class variables
-    private Player player1;
-    private Player player2;
+
     private String[][] boardTemplate; // Declare boardTemplate as a member variable
 
     public Board () {
@@ -49,20 +47,6 @@ public class Board {
 
     public String getElement(int row, int col) {
         return boardTemplate[row][col];
-    }
-
-    //Carro Suggestions:
-    //I suggest using setters to fetch the two player objects that are created when the user sets their names.
-    //According to BP it is apparently better to use a setter rather than making the class constuctor expect
-    //player objects.
-    //Making a Player class that is tightly coupled with a GameBoard class (if we made Player class's
-    // constructor requiring an instance of GameBoard) we could not test the player class without
-    // also creating a Gameboard(?) and using the players in other future contexts (like in a shop)
-    // would require the gameboard instance to come along unnecessarily aswell.
-
-    public void setPlayers(Player player1, Player player2) {
-        this.player1 = player1;
-        this.player2 = player2;
     }
 
     //Getters for sums of fields (to compare to diamonds)
