@@ -6,6 +6,6 @@ public class Card {
     private int id;
     private int pressure;
 
-
-
+    public Card() {
+    }
 }
