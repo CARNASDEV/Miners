@@ -50,24 +50,22 @@ public class Menu {
         // Choose player 1 name
         System.out.print("Enter the name of Player 1: ");
         String name1 = scanner.nextLine();
-        Player player1 = new Player();
-        player1.setName(name1);
+        Player player1 = new Player(name1);
+        
 
         // Choose player 2 name
         System.out.print("Enter the name of Player 2: ");
         String name2 = scanner.nextLine();
-        Player player2 = new Player();
-        player2.setName(name2);
+        Player player2 = new Player(name2);
+       
 
         System.out.println(player1.getName() + " and " + player2.getName() + ", you are now entering into the deep dark mines to decide who is the best miner. Setting up the battlefield...");
 
-        // Create an instance of the GameBoard class
-        Board board = new Board();
+       
         // Create an instanc of GameEngine
-        GameEngine gameEngine = new GameEngine();
+        GameEngine gameEngine = new GameEngine(player1, player2);
 
-        // Send the players to GameEngine
-        gameEngine.setPlayers(player1, player2);
+        
     }
 
     public static int getInput() {

@@ -4,11 +4,22 @@ public class GameEngine {
     private Player player1;
     private Player player2;
 
-
-    public void setPlayers(Player player1, Player player2) {
+    public GameEngine(){}
+    
+    public GameEngine(Player player1, Player player2){
         this.player1 = player1;
         this.player2 = player2;
+        Board board = new Board();
+        startGame();
     }
+
+    public void startGame(){}
+
+
+
+
+
+
 
     //TODO: Skapa två spelare (Dem måste ha varsin deck (25) + hand(5))
 

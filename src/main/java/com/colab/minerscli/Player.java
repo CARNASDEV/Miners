@@ -12,13 +12,11 @@ public class Player {
 
     public Player(String name) {
         this.name = name;
-        this.deck = new Deck();
-        this.playerHand = new PlayerHand();
+        this.deck = new Deck(); 
+        this.playerHand = new PlayerHand(); 
     }
 
-    public Player(){
-
-    }
+    public Player(){}
 
     public String getName() {
         return name;

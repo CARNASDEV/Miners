@@ -23,7 +23,9 @@ public class Board {
             {"-", "-", "-", "-", "-", "-", "-", "-", "-", "-"}, // array8
         };
     }
-
+    public void showBoard(){
+        System.out.println(boardTemplate);
+    }
 
     // Printing methods
     public static void printLine(String[] array) {
