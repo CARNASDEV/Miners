@@ -18,6 +18,22 @@ public class Player {
 
     public Player(){}
 
+    //Mechanics:
+
+    public Card drawCard(){
+        översta kortet från Deck måste skickas till PlayerHand
+    
+    }
+
+    public PlayerHand drawHand(){
+
+
+    }
+    
+
+
+    //GETSET:
+
     public String getName() {
         return name;
     }
