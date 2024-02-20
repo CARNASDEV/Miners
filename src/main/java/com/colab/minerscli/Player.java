@@ -19,16 +19,21 @@ public class Player {
     public Player(){}
 
     //Mechanics:
-
-    public Card drawCard(){
-        översta kortet från Deck måste skickas till PlayerHand
     
+
+    public void drawCard() {
+        if (!(this.deck.cards.isEmpty())) {
+        
+            playerHand.addCard(deck.cards.remove(0));
+        }
+
     }
 
-    public PlayerHand drawHand(){
-
-
+    public void drawHand(){
+        for (int i = 0; i <= 4; i++) {
+            drawCard();
     }
+}
     
 
 

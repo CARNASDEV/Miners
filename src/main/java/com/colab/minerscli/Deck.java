@@ -17,12 +17,14 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 public class Deck {
-    private Card[] cards;
+    public List<Card> cards; // Change from array to ArrayList
 
     public Deck() {
-        cards = new Card[25];
+        cards = new ArrayList<>(); // Initialize as ArrayList
         initializeDeckFromDatabase();
     }
+
+    
 
     private void initializeDeckFromDatabase() {
         try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
@@ -54,8 +56,8 @@ public class Deck {
                     String name = randomDocument.getString("name");
                     int pressure = randomDocument.getInteger("pressure");
 
-                    // Create the Card object
-                    cards[uniqueIds.size() - 1] = new Card(name, id, pressure);
+                    // Create the Card object and add to ArrayList
+                    cards.add(new Card(name, id, pressure));
                 }
             }
         } catch (Exception e) {

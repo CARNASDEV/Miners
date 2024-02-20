@@ -5,6 +5,7 @@ import java.util.Random;
 public class GameEngine {
     private Player player1;
     private Player player2;
+    
 
     public GameEngine(){}
     
@@ -12,10 +13,10 @@ public class GameEngine {
         this.player1 = player1;
         this.player2 = player2;
         Board board = new Board();
-        turnOne(tossCoin(Player player1, Player player2));
+        startGame(player1, player2);
     }
 
-    public static Player tossCoin(Player player1, Player player2) {
+    public static String tossCoin() {
         // Randomly generate 0 or 1
         Random random = new Random();
         int result = random.nextInt(2);
@@ -28,10 +29,27 @@ public class GameEngine {
         }
     }
 
-    public static void turnOne(Player player){
+    public static void startGame(Player player1, Player player2){
+        player1.drawHand();
+        player2.drawHand();
+
+
+        //player 1 board perspective appears
+        //player 1 picks a card and places it (we store the choice on the side and change the board after or simultaneously with player 2)
+        //player 1 ends the turn
+        //player 2 accepts he is at the board
+        //player 2 board perspective appears (without seeing what player 1 did) (we flip it)
+        //player 2 picks a card and places it (we store the choice on the side and change the board after or simultaneously with player 2)
+        //player 2 ends the turn
+        //board updates fully 
+
+        //win conditions, if game still on, repeat 
+
+
         //Need to change the PlayerHand and Deck to ArrayLists, so we can use the better methods.
         //We need to figure out how to first draw 5 cards into the PlayerHand and then draw one in the beginning of each turn
         //The turn of each player consists of picking a Card object from PlayerHand and placing it on the board (using methods in the Board)
+        
         //Check win conditions (if a player has 21 points within one field on their side, they get the diamond responding to that field, 
         //if they have more than 21, the diamond gets destroyed and they can change the placement of miners working on that field to another field). [Based on the comparison of the Diamonds density and the sum of fields (methods in Board)
         //if they have an equal amount of diamonds or none at all (which still is equal) the one with the least pressure on the field wins. 
@@ -40,7 +58,7 @@ public class GameEngine {
 
     }
 
-    }
+}
 
 
 
@@ -62,4 +80,4 @@ public class GameEngine {
 
 
 
-}
+
