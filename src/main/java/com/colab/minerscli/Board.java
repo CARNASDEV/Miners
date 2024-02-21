@@ -12,7 +12,7 @@ public class Board {
         // Initialize boardTemplate as a nested ArrayList
         boardTemplate = new ArrayList<>();
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array0
-        boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array1
+        boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "2", "2", "-", "0", "0", "-"))); // array1
         boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array2
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array3
         boardTemplate.add(new ArrayList<>(List.of("-", "2", "1", "-", "2", "1", "-", "2", "1", "-"))); // array4 : diamonds
@@ -21,6 +21,8 @@ public class Board {
         boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array7
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array8
     }
+
+
 
     public void showBoard() {
         // Print the nested ArrayList
@@ -31,6 +33,13 @@ public class Board {
             System.out.println();
         }
     }
+    public void showBoardPlayer2Perspective() {
+        Collections.reverse(boardTemplate);
+        showBoard();
+        Collections.reverse(boardTemplate);
+    }
+
+
 
     // Methods to access and modify values
     public void setElement(int row, int col, String value) {

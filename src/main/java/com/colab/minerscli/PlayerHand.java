@@ -32,13 +32,9 @@ public class PlayerHand { //The cards that the player plays with
 
     //Card class needs to have a toString method or else the cards will be printed here.
     public void printCards() {
-        for (Card card : hand) {
-            System.out.println(card);
-
-
-            //System.out.println(card.getName());
-            //System.out.println(card.getId());
-            //System.out.println(card.getPressure());
+        System.out.println("Player's Hand:");
+        for (Card card : this.hand) {
+            System.out.println(card.toString());
         }
     }
 

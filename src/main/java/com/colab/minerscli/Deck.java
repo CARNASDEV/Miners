@@ -10,7 +10,6 @@ import java.util.Set;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
@@ -24,19 +23,17 @@ public class Deck {
         initializeDeckFromDatabase();
     }
 
-    
-
     private void initializeDeckFromDatabase() {
         try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
-            MongoDatabase database = mongoClient.getDatabase("your_database_name");
-            MongoCollection<Document> collection = database.getCollection("your_collection_name");
+            MongoDatabase database = mongoClient.getDatabase("MinersDB");
+            MongoCollection<Document> collection = database.getCollection("CardCollection");
 
             // Retrieve 50 random documents
             List<Document> randomDocuments = collection.aggregate(Arrays.asList(
-                new Document("$sample", new Document("size", 50))
+                    new Document("$sample", new Document("size", 50))
             )).into(new ArrayList<>());
 
-            Set<Integer> uniqueIds = new HashSet<>();
+            Set<ObjectId> uniqueIds = new HashSet<>();
             Random random = new Random();
 
             // Generate 25 unique random IDs
@@ -46,7 +43,7 @@ public class Deck {
                 Document randomDocument = randomDocuments.get(randomIndex);
 
                 // Extract ID from the document
-                int id = randomDocument.getInteger("id");
+                ObjectId id = randomDocument.getObjectId("_id");
 
                 // Check if the ID is unique
                 if (!uniqueIds.contains(id)) {
@@ -57,7 +54,7 @@ public class Deck {
                     int pressure = randomDocument.getInteger("pressure");
 
                     // Create the Card object and add to ArrayList
-                    cards.add(new Card(name, id, pressure));
+                    cards.add(new Card(name, pressure));
                 }
             }
         } catch (Exception e) {

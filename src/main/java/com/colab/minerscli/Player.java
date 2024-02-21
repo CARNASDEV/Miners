@@ -19,20 +19,25 @@ public class Player {
     public Player(){}
 
     //Mechanics:
-    
+
 
     public void drawCard() {
-        if (!(this.deck.cards.isEmpty())) {
-        
+        if (!this.deck.cards.isEmpty()) {
             playerHand.addCard(deck.cards.remove(0));
-        }
 
+            //playerHand.printCards();
+        } else {
+            System.out.println("The deck is empty.");
+        }
     }
+
 
     public void drawHand(){
         for (int i = 0; i <= 4; i++) {
             drawCard();
+        playerHand.printCards();
     }
+
 }
     
 
