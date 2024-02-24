@@ -8,10 +8,16 @@ public class Card {
 
     public Card(){}
 
-    public Card(String name, int id, int pressure) {
+    public Card(String name, int pressure) {
     this.name = name;
-    this.id = id;
     this.pressure = pressure;
+    }
+
+
+    //Override toString method to print out card object in a meaningful way
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Pressure: " + pressure;
     }
 
     public int getId() {

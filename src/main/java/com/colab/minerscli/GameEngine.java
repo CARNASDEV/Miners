@@ -5,7 +5,6 @@ import java.util.Random;
 public class GameEngine {
     private Player player1;
     private Player player2;
-    
 
     public GameEngine(){}
     
@@ -13,7 +12,7 @@ public class GameEngine {
         this.player1 = player1;
         this.player2 = player2;
         Board board = new Board();
-        startGame(player1, player2);
+        //startGame(board, player1, player2); //See comment in startGame
     }
 
    /*
@@ -30,10 +29,33 @@ public class GameEngine {
         }
     }*/
 
-    public static void startGame(Player player1, Player player2){
-        player1.drawHand();
-        player2.drawHand();
+    //By passing board into startGame I'm making it accessible to change throughout the progress of the game.
+    public static void startGame(Board board, Player player1, Player player2){
+        //player1.drawHand();
+        //playerHand.printCards(); // Print the cards after drawing all 5 cards
 
+        //player2.drawHand();
+        //player1.drawCard();
+        //player1.drawCard();
+        //board.showBoardPlayer1Perspective();
+        //player1.drawCard();
+
+        boolean gameActive = true;
+        boolean isPlayer1Turn = tossCoin().equals("player1");
+
+        while (gameActive) {
+            // Print current board state
+            if (isPlayer1Turn) {
+                board.showBoard();
+            } else {
+                board.showBoardPlayer2Perspective();
+            }
+
+            // For now, let's just end the game after one turn
+            gameActive = false;
+        }
+
+        //board.showBoardPlayer2Perspective();
 
         //player 1 board perspective appears
         //player 1 picks a card and places it (we store the choice on the side and change the board after or simultaneously with player 2)
