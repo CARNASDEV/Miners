@@ -12,7 +12,6 @@ public class Card {
     this.name = name;
     this.id = id;
     this.pressure = pressure;
-
     }
 
     public int getId() {

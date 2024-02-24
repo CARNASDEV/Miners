@@ -8,33 +8,27 @@ import java.util.Random;
 import java.util.Set;
 
 import org.bson.Document;
-import org.bson.types.ObjectId;
 
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 public class Deck {
-    public List<Card> cards; // Change from array to ArrayList
+    public List<Card> deck; // Change from array to ArrayList
 
     public Deck() {
-        cards = new ArrayList<>(); // Initialize as ArrayList
+        deck = new ArrayList<>();
         initializeDeckFromDatabase();
     }
-
-    
-
     private void initializeDeckFromDatabase() {
         try (MongoClient mongoClient = MongoClients.create("mongodb://localhost:27017")) {
             MongoDatabase database = mongoClient.getDatabase("your_database_name");
             MongoCollection<Document> collection = database.getCollection("your_collection_name");
 
             // Retrieve 50 random documents
-            List<Document> randomDocuments = collection.aggregate(Arrays.asList(
-                new Document("$sample", new Document("size", 50))
-            )).into(new ArrayList<>());
+            List<Document> randomDocuments = collection.aggregate(
+                    Arrays.asList(new Document("$sample", new Document("size", 50)))).into(new ArrayList<>());
 
             Set<Integer> uniqueIds = new HashSet<>();
             Random random = new Random();
@@ -57,7 +51,7 @@ public class Deck {
                     int pressure = randomDocument.getInteger("pressure");
 
                     // Create the Card object and add to ArrayList
-                    cards.add(new Card(name, id, pressure));
+                    deck.add(new Card(name, id, pressure));
                 }
             }
         } catch (Exception e) {

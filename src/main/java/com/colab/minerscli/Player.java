@@ -3,11 +3,8 @@ package com.colab.minerscli;
 
 
 public class Player {
-
     private String name;
-
     private Deck deck;
-
     private PlayerHand playerHand;
 
     public Player(String name) {
@@ -19,23 +16,18 @@ public class Player {
     public Player(){}
 
     //Mechanics:
-    
-
+    //* If deck is not empty, a card gets moved to hand.
     public void drawCard() {
-        if (!(this.deck.cards.isEmpty())) {
-        
-            playerHand.addCard(deck.cards.remove(0));
-        }
-
+        if (!(this.deck.deck.isEmpty())) {
+            playerHand.addCard(deck.deck.remove(0));}
     }
 
+    //*Draws 5 deck in the beggining of the game.
     public void drawHand(){
         for (int i = 0; i <= 4; i++) {
             drawCard();
     }
 }
-    
-
 
     //GETSET:
 

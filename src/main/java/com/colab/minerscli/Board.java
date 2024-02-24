@@ -23,7 +23,6 @@ public class Board {
     }
 
     public void showBoard() {
-        // Print the nested ArrayList
         for (List<String> row : boardTemplate) {
             for (String element : row) {
                 System.out.print(element + " ");

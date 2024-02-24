@@ -16,7 +16,8 @@ public class GameEngine {
         startGame(player1, player2);
     }
 
-    public static String tossCoin() {
+   /*
+   public static String tossCoin() {
         // Randomly generate 0 or 1
         Random random = new Random();
         int result = random.nextInt(2);
@@ -27,7 +28,7 @@ public class GameEngine {
         } else {
             return "player2";
         }
-    }
+    }*/
 
     public static void startGame(Player player1, Player player2){
         player1.drawHand();
@@ -47,7 +48,7 @@ public class GameEngine {
 
 
         //Need to change the PlayerHand and Deck to ArrayLists, so we can use the better methods.
-        //We need to figure out how to first draw 5 cards into the PlayerHand and then draw one in the beginning of each turn
+        //We need to figure out how to first draw 5 deck into the PlayerHand and then draw one in the beginning of each turn
         //The turn of each player consists of picking a Card object from PlayerHand and placing it on the board (using methods in the Board)
         
         //Check win conditions (if a player has 21 points within one field on their side, they get the diamond responding to that field, 

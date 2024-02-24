@@ -1,7 +1,6 @@
 package com.colab.minerscli;
 
 import java.util.Scanner;
-
 public class Menu {
     private final static Scanner scanner = new Scanner(System.in);
 
@@ -32,7 +31,7 @@ public class Menu {
             System.out.println("[1] - Start the game!");
             System.out.println("[2] - Exit the game");
 
-            choice = getInput();
+            choice = scanner.nextShort();
             if (choice == 1) {
                 System.out.println("Starting the game...");
                 choosePlayerNames();
@@ -62,24 +61,7 @@ public class Menu {
         System.out.println(player1.getName() + " and " + player2.getName() + ", you are now entering into the deep dark mines to decide who is the best miner. Setting up the battlefield...");
 
        
-        // Create an instanc of GameEngine
+        // Create an instance of GameEngine
         GameEngine gameEngine = new GameEngine(player1, player2);
-
-        
-    }
-
-    public static int getInput() {
-        int choice = -1;
-        boolean validInput = false;
-
-        while (!validInput) {
-            try {
-                choice = Integer.parseInt(scanner.nextLine());
-                validInput = true;
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number.");
-            }
-        }
-        return choice;
     }
 }
