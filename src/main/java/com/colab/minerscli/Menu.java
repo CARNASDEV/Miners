@@ -65,7 +65,6 @@ public class Menu {
         // Create an instanc of GameEngine
         GameEngine gameEngine = new GameEngine(player1, player2);
 
-        
     }
 
     public static int getInput() {

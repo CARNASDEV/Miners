@@ -20,15 +20,25 @@ public class Player {
 
     //Mechanics:
 
-    public Card drawCard(){
-        översta kortet från Deck måste skickas till PlayerHand
-    
+
+    public void drawCard() {
+        if (!this.deck.cards.isEmpty()) {
+            playerHand.addCard(deck.cards.remove(0));
+
+            //playerHand.printCards();
+        } else {
+            System.out.println("The deck is empty.");
+        }
     }
 
-    public PlayerHand drawHand(){
 
-
+    public void drawHand(){
+        for (int i = 0; i <= 4; i++) {
+            drawCard();
+        playerHand.printCards();
     }
+
+}
     
 
 
