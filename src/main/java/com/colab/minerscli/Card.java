@@ -20,13 +20,6 @@ public class Card {
         return "Name: " + name + ", Pressure: " + pressure;
     }
 
-
-    //Override toString method to print out card object in a meaningful way
-    @Override
-    public String toString() {
-        return "Name: " + name + ", Pressure: " + pressure;
-    }
-
     public int getId() {
         return id;
     }

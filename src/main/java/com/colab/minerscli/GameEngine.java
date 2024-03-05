@@ -15,7 +15,7 @@ public class GameEngine {
         //startGame(board, player1, player2); //See comment in startGame
     }
 
-   /*
+
    public static String tossCoin() {
         // Randomly generate 0 or 1
         Random random = new Random();
@@ -27,7 +27,7 @@ public class GameEngine {
         } else {
             return "player2";
         }
-    }*/
+    }
 
     //By passing board into startGame I'm making it accessible to change throughout the progress of the game.
     public static void startGame(Board board, Player player1, Player player2){

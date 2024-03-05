@@ -4,12 +4,12 @@ package com.colab.minerscli;
 
 public class Player {
     private String name;
-    private Deck deck;
+    private DeckJSON deck;
     private PlayerHand playerHand;
 
     public Player(String name) {
         this.name = name;
-        this.deck = new Deck(); 
+        this.deck = new DeckJSON();
         this.playerHand = new PlayerHand(); 
     }
 
@@ -39,11 +39,11 @@ public class Player {
         this.name = name;
     }
 
-    public Deck getDeck() {
+    public DeckJSON getDeck() {
         return deck;
     }
 
-    public void setDeck(Deck deck) {
+    public void setDeck(DeckJSON deck) {
         this.deck = deck;
     }
 

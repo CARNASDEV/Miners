@@ -51,7 +51,7 @@ public class Deck {
                     int pressure = randomDocument.getInteger("pressure");
 
                     // Create the Card object and add to ArrayList
-                    deck.add(new Card(name, id, pressure));
+                    deck.add(new Card(name, pressure));
                 }
             }
         } catch (Exception e) {
