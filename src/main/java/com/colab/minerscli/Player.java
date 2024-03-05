@@ -1,16 +1,20 @@
 package com.colab.minerscli;
 
 
+import java.util.List;
 
 public class Player {
     private String name;
-    private DeckJSON deck;
+    private DeckJSON dj;
+    private List<Card> deck;
     private PlayerHand playerHand;
 
     public Player(String name) {
         this.name = name;
-        this.deck = new DeckJSON();
-        this.playerHand = new PlayerHand(); 
+        dj = new DeckJSON();
+        this.deck = dj.generateDeck();
+        this.playerHand = new PlayerHand();
+        drawHand();
     }
 
     public Player(){}
@@ -18,8 +22,8 @@ public class Player {
     //Mechanics:
     //* If deck is not empty, a card gets moved to hand.
     public void drawCard() {
-        if (!(this.deck.deck.isEmpty())) {
-            playerHand.addCard(deck.deck.remove(0));}
+        if (!(this.deck.isEmpty())) {
+            playerHand.addCard(deck.remove(0));}
     }
 
     //*Draws 5 deck in the beggining of the game.
@@ -40,11 +44,11 @@ public class Player {
     }
 
     public DeckJSON getDeck() {
-        return deck;
+        return dj;
     }
 
     public void setDeck(DeckJSON deck) {
-        this.deck = deck;
+        this.dj = deck;
     }
 
     public PlayerHand getPlayerHand() {
