@@ -1,400 +1,302 @@
-[{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898cb"
+[
+  {
+    "id": 1,
+    "name": "Jacob the Timid",
+    "pressure": 1,
+    "type": "Human"
   },
-  "name": "Jacob the Timid",
-  "pressure": 1,
-  "type": "Human"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898cc"
+  {
+    "id": 2,
+    "name": "Emily the Inquisitive",
+    "pressure": 2,
+    "type": "Human"
   },
-  "name": "Emily the Inquisitive",
-  "pressure": 2,
-  "type": "Human"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898cd"
+  {
+    "id": 3,
+    "name": "Alexander the Adventurous",
+    "pressure": 3,
+    "type": "Human"
   },
-  "name": "Alexander the Adventurous",
-  "pressure": 3,
-  "type": "Human"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898ce"
+  {
+    "id": 4,
+    "name": "Sophia the Courageous",
+    "pressure": 4,
+    "type": "Human"
   },
-  "name": "Sophia the Courageous",
-  "pressure": 4,
-  "type": "Human"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898cf"
+  {
+    "id": 5,
+    "name": "Olivia the Determined",
+    "pressure": 5,
+    "type": "Human"
   },
-  "name": "Olivia the Determined",
-  "pressure": 5,
-  "type": "Human"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898d0"
+  {
+    "id": 6,
+    "name": "Ethan the Fearless",
+    "pressure": 6,
+    "type": "Human"
   },
-  "name": "Ethan the Fearless",
-  "pressure": 6,
-  "type": "Human"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898d1"
+  {
+    "id": 7,
+    "name": "Mia the Indomitable",
+    "pressure": 7,
+    "type": "Human"
   },
-  "name": "Mia the Indomitable",
-  "pressure": 7,
-  "type": "Human"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898d2"
+  {
+    "id": 8,
+    "name": "Lucas the Valiant",
+    "pressure": 8,
+    "type": "Human"
   },
-  "name": "Lucas the Valiant",
-  "pressure": 8,
-  "type": "Human"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898d3"
+  {
+    "id": 9,
+    "name": "Ava the Unyielding",
+    "pressure": 9,
+    "type": "Human"
   },
-  "name": "Ava the Unyielding",
-  "pressure": 9,
-  "type": "Human"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898d4"
+  {
+    "id": 10,
+    "name": "Noah the Heroic",
+    "pressure": 10,
+    "type": "Human"
   },
-  "name": "Noah the Heroic",
-  "pressure": 10,
-  "type": "Human"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898d5"
+  {
+    "id": 11,
+    "name": "Blaze the Flicker",
+    "pressure": 1,
+    "type": "ENH (Mutant)"
   },
-  "name": "Blaze the Flicker",
-  "pressure": 1,
-  "type": "ENH (Mutant)"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898d6"
+  {
+    "id": 12,
+    "name": "Frost the Chiller",
+    "pressure": 2,
+    "type": "ENH (Mutant)"
   },
-  "name": "Frost the Chiller",
-  "pressure": 2,
-  "type": "ENH (Mutant)"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898d7"
+  {
+    "id": 13,
+    "name": "Surge the Buzz",
+    "pressure": 3,
+    "type": "ENH (Mutant)"
   },
-  "name": "Surge the Buzz",
-  "pressure": 3,
-  "type": "ENH (Mutant)"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898d8"
+  {
+    "id": 14,
+    "name": "Venom the Slitherer",
+    "pressure": 4,
+    "type": "ENH (Mutant)"
   },
-  "name": "Venom the Slitherer",
-  "pressure": 4,
-  "type": "ENH (Mutant)"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898d9"
+  {
+    "id": 15,
+    "name": "Nova the Spark",
+    "pressure": 5,
+    "type": "ENH (Mutant)"
   },
-  "name": "Nova the Spark",
-  "pressure": 5,
-  "type": "ENH (Mutant)"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898da"
+  {
+    "id": 16,
+    "name": "Quake the Rumbler",
+    "pressure": 6,
+    "type": "ENH (Mutant)"
   },
-  "name": "Quake the Rumbler",
-  "pressure": 6,
-  "type": "ENH (Mutant)"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898db"
+  {
+    "id": 17,
+    "name": "Eclipse the Shroud",
+    "pressure": 7,
+    "type": "ENH (Mutant)"
   },
-  "name": "Eclipse the Shroud",
-  "pressure": 7,
-  "type": "ENH (Mutant)"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898dc"
+  {
+    "id": 18,
+    "name": "Tempest the Tempestuous",
+    "pressure": 8,
+    "type": "ENH (Mutant)"
   },
-  "name": "Tempest the Tempestuous",
-  "pressure": 8,
-  "type": "ENH (Mutant)"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898dd"
+  {
+    "id": 19,
+    "name": "Titan the Behemoth",
+    "pressure": 9,
+    "type": "ENH (Mutant)"
   },
-  "name": "Titan the Behemoth",
-  "pressure": 9,
-  "type": "ENH (Mutant)"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898de"
+  {
+    "id": 20,
+    "name": "Phoenix the Incinerator",
+    "pressure": 10,
+    "type": "ENH (Mutant)"
   },
-  "name": "Phoenix the Incinerator",
-  "pressure": 10,
-  "type": "ENH (Mutant)"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898df"
+  {
+    "id": 21,
+    "name": "Grim the Whisper",
+    "pressure": 1,
+    "type": "Monster"
   },
-  "name": "Grim the Whisper",
-  "pressure": 1,
-  "type": "Monster"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898e0"
+  {
+    "id": 22,
+    "name": "Fang the Gnasher",
+    "pressure": 2,
+    "type": "Monster"
   },
-  "name": "Fang the Gnasher",
-  "pressure": 2,
-  "type": "Monster"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898e1"
+  {
+    "id": 23,
+    "name": "Gloom the Shadow",
+    "pressure": 3,
+    "type": "Monster"
   },
-  "name": "Gloom the Shadow",
-  "pressure": 3,
-  "type": "Monster"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898e2"
+  {
+    "id": 24,
+    "name": "Scorch the Ember",
+    "pressure": 4,
+    "type": "Monster"
   },
-  "name": "Scorch the Ember",
-  "pressure": 4,
-  "type": "Monster"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898e3"
+  {
+    "id": 25,
+    "name": "Claw the Pouncer",
+    "pressure": 5,
+    "type": "Monster"
   },
-  "name": "Claw the Pouncer",
-  "pressure": 5,
-  "type": "Monster"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898e4"
+  {
+    "id": 26,
+    "name": "Wraith the Specter",
+    "pressure": 6,
+    "type": "Monster"
   },
-  "name": "Wraith the Specter",
-  "pressure": 6,
-  "type": "Monster"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898e5"
+  {
+    "id": 27,
+    "name": "Abyss the Abyssal",
+    "pressure": 7,
+    "type": "Monster"
   },
-  "name": "Abyss the Abyssal",
-  "pressure": 7,
-  "type": "Monster"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898e6"
+  {
+    "id": 28,
+    "name": "Vortex the Swallower",
+    "pressure": 8,
+    "type": "Monster"
   },
-  "name": "Vortex the Swallower",
-  "pressure": 8,
-  "type": "Monster"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898e7"
+  {
+    "id": 29,
+    "name": "Leviathan the Leviathan",
+    "pressure": 9,
+    "type": "Monster"
   },
-  "name": "Leviathan the Leviathan",
-  "pressure": 9,
-  "type": "Monster"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898e8"
+  {
+    "id": 30,
+    "name": "Dread the Terror",
+    "pressure": 10,
+    "type": "Monster"
   },
-  "name": "Dread the Terror",
-  "pressure": 10,
-  "type": "Monster"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898e9"
+  {
+    "id": 31,
+    "name": "Aurora the Gleam",
+    "pressure": 1,
+    "type": "Magical Being"
   },
-  "name": "Aurora the Gleam",
-  "pressure": 1,
-  "type": "Magical Being"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898ea"
+  {
+    "id": 32,
+    "name": "Zephyr the Breeze",
+    "pressure": 2,
+    "type": "Magical Being"
   },
-  "name": "Zephyr the Breeze",
-  "pressure": 2,
-  "type": "Magical Being"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898eb"
+  {
+    "id": 33,
+    "name": "Mirage the Mirage",
+    "pressure": 3,
+    "type": "Magical Being"
   },
-  "name": "Mirage the Mirage",
-  "pressure": 3,
-  "type": "Magical Being"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898ec"
+  {
+    "id": 34,
+    "name": "Seraphina the Cherub",
+    "pressure": 4,
+    "type": "Magical Being"
   },
-  "name": "Seraphina the Cherub",
-  "pressure": 4,
-  "type": "Magical Being"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898ed"
+  {
+    "id": 35,
+    "name": "Aether the Etheric",
+    "pressure": 5,
+    "type": "Magical Being"
   },
-  "name": "Aether the Etheric",
-  "pressure": 5,
-  "type": "Magical Being"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898ee"
+  {
+    "id": 36,
+    "name": "Sylvan the Sprite",
+    "pressure": 6,
+    "type": "Magical Being"
   },
-  "name": "Sylvan the Sprite",
-  "pressure": 6,
-  "type": "Magical Being"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898ef"
+  {
+    "id": 37,
+    "name": "Eclipse the Eclipse",
+    "pressure": 7,
+    "type": "Magical Being"
   },
-  "name": "Eclipse the Eclipse",
-  "pressure": 7,
-  "type": "Magical Being"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898f0"
+  {
+    "id": 38,
+    "name": "Inferno the Inferno",
+    "pressure": 8,
+    "type": "Magical Being"
   },
-  "name": "Inferno the Inferno",
-  "pressure": 8,
-  "type": "Magical Being"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898f1"
+  {
+    "id": 39,
+    "name": "Celestia the Celestial",
+    "pressure": 9,
+    "type": "Magical Being"
   },
-  "name": "Celestia the Celestial",
-  "pressure": 9,
-  "type": "Magical Being"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898f2"
+  {
+    "id": 40,
+    "name": "Chronos the Eternal",
+    "pressure": 10,
+    "type": "Magical Being"
   },
-  "name": "Chronos the Eternal",
-  "pressure": 10,
-  "type": "Magical Being"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898f3"
+  {
+    "id": 41,
+    "name": "Gabriel the Herald",
+    "pressure": 1,
+    "type": "Angel"
   },
-  "name": "Gabriel the Herald",
-  "pressure": 1,
-  "type": "Angel"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898f4"
+  {
+    "id": 42,
+    "name": "Raphael the Soother",
+    "pressure": 2,
+    "type": "Angel"
   },
-  "name": "Raphael the Soother",
-  "pressure": 2,
-  "type": "Angel"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898f5"
+  {
+    "id": 43,
+    "name": "Michael the Guardian",
+    "pressure": 3,
+    "type": "Angel"
   },
-  "name": "Michael the Guardian",
-  "pressure": 3,
-  "type": "Angel"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898f6"
+  {
+    "id": 44,
+    "name": "Uriel the Illuminator",
+    "pressure": 4,
+    "type": "Angel"
   },
-  "name": "Uriel the Illuminator",
-  "pressure": 4,
-  "type": "Angel"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898f7"
+  {
+    "id": 45,
+    "name": "Azrael the Mercy",
+    "pressure": 5,
+    "type": "Angel"
   },
-  "name": "Azrael the Mercy",
-  "pressure": 5,
-  "type": "Angel"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898f8"
+  {
+    "id": 46,
+    "name": "Metatron the Archangel",
+    "pressure": 6,
+    "type": "Angel"
   },
-  "name": "Metatron the Archangel",
-  "pressure": 6,
-  "type": "Angel"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898f9"
+  {
+    "id": 47,
+    "name": "Seraphiel the Divine",
+    "pressure": 7,
+    "type": "Angel"
   },
-  "name": "Seraphiel the Divine",
-  "pressure": 7,
-  "type": "Angel"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898fa"
+  {
+    "id": 48,
+    "name": "Remiel the Mercy",
+    "pressure": 8,
+    "type": "Angel"
   },
-  "name": "Remiel the Mercy",
-  "pressure": 8,
-  "type": "Angel"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898fb"
+  {
+    "id": 49,
+    "name": "Raziel the Wiseman",
+    "pressure": 9,
+    "type": "Angel"
   },
-  "name": "Raziel the Wiseman",
-  "pressure": 9,
-  "type": "Angel"
-},
-{
-  "_id": {
-    "$oid": "65d32c7a9a87a193375898fc"
-  },
-  "name": "Sariel the Judge",
-  "pressure": 10,
-  "type": "Angel"
-}]
+  {
+    "id": 50,
+    "name": "Sariel the Judge",
+    "pressure": 10,
+    "type": "Angel"
+  }
+]

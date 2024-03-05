@@ -12,7 +12,7 @@ public class GameEngine {
         this.player1 = player1;
         this.player2 = player2;
         Board board = new Board();
-        //startGame(board, player1, player2); //See comment in startGame
+        startGame(board, player1, player2); //See comment in startGame
     }
 
 
