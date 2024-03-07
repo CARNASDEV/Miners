@@ -24,23 +24,28 @@ public class Menu {
         System.out.println("Press Enter to continue...");
         scanner.nextLine();
 
-        int choice;
         boolean validChoice = false;
 
         while (!validChoice) {
             System.out.println("[1] - Start the game!");
             System.out.println("[2] - Exit the game");
+// Adjusting to read an integer directly, as nextShort() can cause issues if not handled properly
+            int choice = Integer.parseInt(scanner.nextLine()); // Adjusted to use nextLine() and parse to avoid Scanner issues
 
-            choice = scanner.nextShort();
-            if (choice == 1) {
-                System.out.println("Starting the game...");
-                choosePlayerNames();
-                validChoice = true;
-            } else if (choice == 2) {
-                System.out.println("Exiting the game...");
-                System.exit(0);
-            } else {
-                System.out.println("Invalid choice. Please try again.");
+            switch (choice) {
+                case 1:
+                    System.out.println("Starting the game...");
+                    choosePlayerNames();
+                    validChoice = true; // Exits the while loop
+                    break;
+                case 2:
+                    System.out.println("Exiting the game...");
+                    System.exit(0); // Exits the program
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    // No need to modify validChoice here, as it remains false
+                    break;
             }
         }
     }
@@ -57,8 +62,6 @@ public class Menu {
         String name2 = scanner.nextLine();
         Player player2 = new Player(name2);
        
-
-        System.out.println(player1.getName() + " and " + player2.getName() + ", you are now entering into the deep dark mines to decide who is the best miner. Setting up the battlefield...");
 
        
         // Create an instance of GameEngine

@@ -6,6 +6,9 @@ public class Card {
     private int id;
     private int pressure;
 
+    private String type; // Added this line i onsdags
+
+
     public Card(){}
 
     public Card(String name, int pressure) {
@@ -37,6 +40,15 @@ public class Card {
     }
     public void setPressure(int pressure) {
         this.pressure = pressure;
+    }
+
+    // Added getter and setter for `type`
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
 

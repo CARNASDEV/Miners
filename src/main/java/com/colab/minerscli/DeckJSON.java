@@ -1,6 +1,7 @@
 package com.colab.minerscli;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class DeckJSON {
 
     public DeckJSON() {
         cardPool = new ArrayList<>();
-        initializeCardPool("resrc/cards.json");
+        initializeCardPool("cards.json");
         this.deck = generateDeck();
     }
 
@@ -26,6 +27,8 @@ public class DeckJSON {
                 return;
             }
             ObjectMapper objectMapper = new ObjectMapper();
+            //Optional, if you want to ignore some fields in the JSON file.
+            objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             cardPool = objectMapper.readValue(inputStream, new TypeReference<List<Card>>(){});
         } catch (IOException e) {
             System.err.println("Error initializing card pool from JSON: " + e.getMessage());

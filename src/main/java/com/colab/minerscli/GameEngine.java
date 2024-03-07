@@ -16,18 +16,6 @@ public class GameEngine {
     }
 
 
-   public static String tossCoin() {
-        // Randomly generate 0 or 1
-        Random random = new Random();
-        int result = random.nextInt(2);
-
-        // If result is 0, it's heads. If result is 1, it's tails.
-        if (result == 0) {
-            return "player1";
-        } else {
-            return "player2";
-        }
-    }
 
     //By passing board into startGame I'm making it accessible to change throughout the progress of the game.
     public static void startGame(Board board, Player player1, Player player2){
@@ -41,15 +29,10 @@ public class GameEngine {
         //player1.drawCard();
 
         boolean gameActive = true;
-        boolean isPlayer1Turn = tossCoin().equals("player1");
 
         while (gameActive) {
             // Print current board state
-            if (isPlayer1Turn) {
                 board.showBoard();
-            } else {
-                board.showBoardPlayer2Perspective();
-            }
 
             // For now, let's just end the game after one turn
             gameActive = false;
@@ -58,6 +41,7 @@ public class GameEngine {
         //board.showBoardPlayer2Perspective();
 
         //player 1 board perspective appears
+        //
         //player 1 picks a card and places it (we store the choice on the side and change the board after or simultaneously with player 2)
         //player 1 ends the turn
         //player 2 accepts he is at the board
