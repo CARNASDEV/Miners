@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": "Jacob the Timid",
+    "pressure": 1,
+    "type": "Human"
+  },
+  {
+    "id": 2,
+    "name": "Emily the Inquisitive",
+    "pressure": 2,
+    "type": "Human"
+  },
+  {
+    "id": 3,
+    "name": "Alexander the Adventurous",
+    "pressure": 3,
+    "type": "Human"
+  },
+  {
+    "id": 4,
+    "name": "Sophia the Courageous",
+    "pressure": 4,
+    "type": "Human"
+  },
+  {
+    "id": 5,
+    "name": "Olivia the Determined",
+    "pressure": 5,
+    "type": "Human"
+  },
+  {
+    "id": 6,
+    "name": "Ethan the Fearless",
+    "pressure": 6,
+    "type": "Human"
+  },
+  {
+    "id": 7,
+    "name": "Mia the Indomitable",
+    "pressure": 7,
+    "type": "Human"
+  },
+  {
+    "id": 8,
+    "name": "Lucas the Valiant",
+    "pressure": 8,
+    "type": "Human"
+  },
+  {
+    "id": 9,
+    "name": "Ava the Unyielding",
+    "pressure": 9,
+    "type": "Human"
+  },
+  {
+    "id": 10,
+    "name": "Noah the Heroic",
+    "pressure": 10,
+    "type": "Human"
+  },
+  {
+    "id": 11,
+    "name": "Blaze the Flicker",
+    "pressure": 1,
+    "type": "ENH (Mutant)"
+  },
+  {
+    "id": 12,
+    "name": "Frost the Chiller",
+    "pressure": 2,
+    "type": "ENH (Mutant)"
+  },
+  {
+    "id": 13,
+    "name": "Surge the Buzz",
+    "pressure": 3,
+    "type": "ENH (Mutant)"
+  },
+  {
+    "id": 14,
+    "name": "Venom the Slitherer",
+    "pressure": 4,
+    "type": "ENH (Mutant)"
+  },
+  {
+    "id": 15,
+    "name": "Nova the Spark",
+    "pressure": 5,
+    "type": "ENH (Mutant)"
+  },
+  {
+    "id": 16,
+    "name": "Quake the Rumbler",
+    "pressure": 6,
+    "type": "ENH (Mutant)"
+  },
+  {
+    "id": 17,
+    "name": "Eclipse the Shroud",
+    "pressure": 7,
+    "type": "ENH (Mutant)"
+  },
+  {
+    "id": 18,
+    "name": "Tempest the Tempestuous",
+    "pressure": 8,
+    "type": "ENH (Mutant)"
+  },
+  {
+    "id": 19,
+    "name": "Titan the Behemoth",
+    "pressure": 9,
+    "type": "ENH (Mutant)"
+  },
+  {
+    "id": 20,
+    "name": "Phoenix the Incinerator",
+    "pressure": 10,
+    "type": "ENH (Mutant)"
+  },
+  {
+    "id": 21,
+    "name": "Grim the Whisper",
+    "pressure": 1,
+    "type": "Monster"
+  },
+  {
+    "id": 22,
+    "name": "Fang the Gnasher",
+    "pressure": 2,
+    "type": "Monster"
+  },
+  {
+    "id": 23,
+    "name": "Gloom the Shadow",
+    "pressure": 3,
+    "type": "Monster"
+  },
+  {
+    "id": 24,
+    "name": "Scorch the Ember",
+    "pressure": 4,
+    "type": "Monster"
+  },
+  {
+    "id": 25,
+    "name": "Claw the Pouncer",
+    "pressure": 5,
+    "type": "Monster"
+  },
+  {
+    "id": 26,
+    "name": "Wraith the Specter",
+    "pressure": 6,
+    "type": "Monster"
+  },
+  {
+    "id": 27,
+    "name": "Abyss the Abyssal",
+    "pressure": 7,
+    "type": "Monster"
+  },
+  {
+    "id": 28,
+    "name": "Vortex the Swallower",
+    "pressure": 8,
+    "type": "Monster"
+  },
+  {
+    "id": 29,
+    "name": "Leviathan the Leviathan",
+    "pressure": 9,
+    "type": "Monster"
+  },
+  {
+    "id": 30,
+    "name": "Dread the Terror",
+    "pressure": 10,
+    "type": "Monster"
+  },
+  {
+    "id": 31,
+    "name": "Aurora the Gleam",
+    "pressure": 1,
+    "type": "Magical Being"
+  },
+  {
+    "id": 32,
+    "name": "Zephyr the Breeze",
+    "pressure": 2,
+    "type": "Magical Being"
+  },
+  {
+    "id": 33,
+    "name": "Mirage the Mirage",
+    "pressure": 3,
+    "type": "Magical Being"
+  },
+  {
+    "id": 34,
+    "name": "Seraphina the Cherub",
+    "pressure": 4,
+    "type": "Magical Being"
+  },
+  {
+    "id": 35,
+    "name": "Aether the Etheric",
+    "pressure": 5,
+    "type": "Magical Being"
+  },
+  {
+    "id": 36,
+    "name": "Sylvan the Sprite",
+    "pressure": 6,
+    "type": "Magical Being"
+  },
+  {
+    "id": 37,
+    "name": "Eclipse the Eclipse",
+    "pressure": 7,
+    "type": "Magical Being"
+  },
+  {
+    "id": 38,
+    "name": "Inferno the Inferno",
+    "pressure": 8,
+    "type": "Magical Being"
+  },
+  {
+    "id": 39,
+    "name": "Celestia the Celestial",
+    "pressure": 9,
+    "type": "Magical Being"
+  },
+  {
+    "id": 40,
+    "name": "Chronos the Eternal",
+    "pressure": 10,
+    "type": "Magical Being"
+  },
+  {
+    "id": 41,
+    "name": "Gabriel the Herald",
+    "pressure": 1,
+    "type": "Angel"
+  },
+  {
+    "id": 42,
+    "name": "Raphael the Soother",
+    "pressure": 2,
+    "type": "Angel"
+  },
+  {
+    "id": 43,
+    "name": "Michael the Guardian",
+    "pressure": 3,
+    "type": "Angel"
+  },
+  {
+    "id": 44,
+    "name": "Uriel the Illuminator",
+    "pressure": 4,
+    "type": "Angel"
+  },
+  {
+    "id": 45,
+    "name": "Azrael the Mercy",
+    "pressure": 5,
+    "type": "Angel"
+  },
+  {
+    "id": 46,
+    "name": "Metatron the Archangel",
+    "pressure": 6,
+    "type": "Angel"
+  },
+  {
+    "id": 47,
+    "name": "Seraphiel the Divine",
+    "pressure": 7,
+    "type": "Angel"
+  },
+  {
+    "id": 48,
+    "name": "Remiel the Mercy",
+    "pressure": 8,
+    "type": "Angel"
+  },
+  {
+    "id": 49,
+    "name": "Raziel the Wiseman",
+    "pressure": 9,
+    "type": "Angel"
+  },
+  {
+    "id": 50,
+    "name": "Sariel the Judge",
+    "pressure": 10,
+    "type": "Angel"
+  }
+]
