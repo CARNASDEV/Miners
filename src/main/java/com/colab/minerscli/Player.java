@@ -8,12 +8,15 @@ public class Player {
     private DeckJSON dj;
     private List<Card> deck;
     private PlayerHand playerHand;
+    private int diamondsRewarded = 0;
+
 
     public Player(String name) {
         this.name = name;
         dj = new DeckJSON();
         this.deck = dj.generateDeck();
         this.playerHand = new PlayerHand();
+        this.diamondsRewarded = 0;
         drawHand();
     }
 
@@ -58,4 +61,9 @@ public class Player {
     public void setPlayerHand(PlayerHand playerHand) {
         this.playerHand = playerHand;
     }
+
+    public int getDiamondsRewarded() { return diamondsRewarded; }
+
+    public void setDiamondsRewarded(int diamondsRewarded) {this.diamondsRewarded = diamondsRewarded;}
+
 }

@@ -7,6 +7,9 @@ import java.util.List;
 
 public class Board {
     private List<List<String>> boardTemplate;
+        public Diamond d1;
+        public Diamond d2;
+        public Diamond d3;
 
     public Board() {
         // Initialize boardTemplate as a nested ArrayList
@@ -20,6 +23,10 @@ public class Board {
         boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array6
         boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array7
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array8
+
+        Diamond d1 = new Diamond();
+        Diamond d2 = new Diamond();
+        Diamond d3 = new Diamond();
     }
 
 

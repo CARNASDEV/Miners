@@ -1,8 +1,8 @@
 package com.colab.minerscli;
 
 public class Diamond {
-
+public int density;
     public Diamond(){
-     final int density = 21;
+      int density = 21;
     }
 }
