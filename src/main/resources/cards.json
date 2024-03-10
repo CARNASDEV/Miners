@@ -123,180 +123,180 @@
     "id": 21,
     "name": "Grim the Whisper",
     "pressure": 1,
-    "type": "Monster"
+    "type": "Magical Being"
   },
   {
     "id": 22,
     "name": "Fang the Gnasher",
     "pressure": 2,
-    "type": "Monster"
+    "type": "Magical Being"
   },
   {
     "id": 23,
     "name": "Gloom the Shadow",
     "pressure": 3,
-    "type": "Monster"
+    "type": "Magical Being"
   },
   {
     "id": 24,
     "name": "Scorch the Ember",
     "pressure": 4,
-    "type": "Monster"
+    "type": "Magical Being"
   },
   {
     "id": 25,
     "name": "Claw the Pouncer",
     "pressure": 5,
-    "type": "Monster"
+    "type": "Magical Being"
   },
   {
     "id": 26,
     "name": "Wraith the Specter",
     "pressure": 6,
-    "type": "Monster"
+    "type": "Magical Being"
   },
   {
     "id": 27,
     "name": "Abyss the Abyssal",
     "pressure": 7,
-    "type": "Monster"
+    "type": "Magical Being"
   },
   {
     "id": 28,
     "name": "Vortex the Swallower",
     "pressure": 8,
-    "type": "Monster"
+    "type": "Magical Being"
   },
   {
     "id": 29,
     "name": "Leviathan the Leviathan",
     "pressure": 9,
-    "type": "Monster"
+    "type": "Magical Being"
   },
   {
     "id": 30,
     "name": "Dread the Terror",
     "pressure": 10,
-    "type": "Monster"
+    "type": "Magical Being"
   },
   {
     "id": 31,
     "name": "Aurora the Gleam",
     "pressure": 1,
-    "type": "Magical Being"
+    "type": "Fairy"
   },
   {
     "id": 32,
     "name": "Zephyr the Breeze",
     "pressure": 2,
-    "type": "Magical Being"
+    "type": "Fairy"
   },
   {
     "id": 33,
     "name": "Mirage the Mirage",
     "pressure": 3,
-    "type": "Magical Being"
+    "type": "Fairy"
   },
   {
     "id": 34,
     "name": "Seraphina the Cherub",
     "pressure": 4,
-    "type": "Magical Being"
+    "type": "Fairy"
   },
   {
     "id": 35,
     "name": "Aether the Etheric",
     "pressure": 5,
-    "type": "Magical Being"
+    "type": "Fairy"
   },
   {
     "id": 36,
     "name": "Sylvan the Sprite",
     "pressure": 6,
-    "type": "Magical Being"
+    "type": "Fairy"
   },
   {
     "id": 37,
-    "name": "Eclipse the Eclipse",
+    "name": "Willow the Bloombringer",
     "pressure": 7,
-    "type": "Magical Being"
+    "type": "Fairy"
   },
   {
     "id": 38,
-    "name": "Inferno the Inferno",
+    "name": "Echo the Multiplying",
     "pressure": 8,
-    "type": "Magical Being"
+    "type": "Fairy"
   },
   {
     "id": 39,
-    "name": "Celestia the Celestial",
+    "name": "Xena the Advanced",
     "pressure": 9,
-    "type": "Magical Being"
+    "type": "Fairy"
   },
   {
     "id": 40,
     "name": "Chronos the Eternal",
     "pressure": 10,
-    "type": "Magical Being"
+    "type": "Fairy"
   },
   {
     "id": 41,
-    "name": "Gabriel the Herald",
+    "name": "Nimbus, The Negligible",
     "pressure": 1,
-    "type": "Angel"
+    "type": "Starborn"
   },
   {
     "id": 42,
-    "name": "Raphael the Soother",
+    "name": "Twinkle, The Trifling",
     "pressure": 2,
-    "type": "Angel"
+    "type": "Starborn"
   },
   {
     "id": 43,
-    "name": "Michael the Guardian",
+    "name": "Stardust, The Struggler",
     "pressure": 3,
-    "type": "Angel"
+    "type": "Starborn"
   },
   {
     "id": 44,
-    "name": "Uriel the Illuminator",
+    "name": "Astral, The Sunseeker",
     "pressure": 4,
-    "type": "Angel"
+    "type": "Starborn"
   },
   {
     "id": 45,
-    "name": "Azrael the Mercy",
+    "name": "Solstice, The Pilgrim",
     "pressure": 5,
-    "type": "Angel"
+    "type": "Starborn"
   },
   {
     "id": 46,
-    "name": "Metatron the Archangel",
+    "name": "Helios, The Flamebearer",
     "pressure": 6,
     "type": "Angel"
   },
   {
     "id": 47,
-    "name": "Seraphiel the Divine",
+    "name": "Eos, The Enlightened",
     "pressure": 7,
-    "type": "Angel"
+    "type": "Starborn"
   },
   {
     "id": 48,
-    "name": "Remiel the Mercy",
+    "name": "Corona, The Crowned",
     "pressure": 8,
-    "type": "Angel"
+    "type": "Starborn"
   },
   {
     "id": 49,
-    "name": "Raziel the Wiseman",
+    "name": "Andromeda, The Apex",
     "pressure": 9,
-    "type": "Angel"
+    "type": "Starborn"
   },
   {
     "id": 50,
-    "name": "Sariel the Judge",
+    "name": "Orion, The Supreme",
     "pressure": 10,
-    "type": "Angel"
+    "type": "Starborn"
   }
 ]
