@@ -20,7 +20,9 @@ public class Card {
     //Override toString method to print out card object in a meaningful way
     @Override
     public String toString() {
-        return "Name: " + name + ", Pressure: " + pressure;
+        //return "Name: " + name + ", Pressure: " + pressure;
+        //return String.format("%-20s | Pressure: %-2d", name, pressure);
+        return String.format("%-20s | Pressure: %-2d", name, pressure);
     }
 
     public int getId() {

@@ -4,6 +4,7 @@ package com.colab.minerscli;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class Board {
     private List<List<String>> boardTemplate;
@@ -15,7 +16,7 @@ public class Board {
         // Initialize boardTemplate as a nested ArrayList
         boardTemplate = new ArrayList<>();
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array0
-        boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "2", "2", "-", "0", "0", "-"))); // array1
+        boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array1
         boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array2
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array3
         boardTemplate.add(new ArrayList<>(List.of("-", "2", "1", "-", "2", "1", "-", "2", "1", "-"))); // array4 : diamonds
@@ -55,6 +56,62 @@ public class Board {
     public String getElement(int row, int col) {
         return boardTemplate.get(row).get(col);
     }
+
+    ////////////////////////////////////////////////////////////////////////////
+    // New method to ask for placement
+    // Modified method to ask for specific placement within the 2x2 area
+    public void askForPlacement(int pressure) {
+        Scanner scanner = new Scanner(System.in); // Reuse existing scanner if you can pass it as a parameter
+        System.out.println("Select a 2x2 grid-area where you would like to place your card:");
+        System.out.println("1: Bottom Left, 2: Bottom Middle, 3: Bottom Right");
+        int chosenAreaNumber = scanner.nextInt(); // Read user input for area
+
+        // Validate chosen area
+        while (chosenAreaNumber < 1 || chosenAreaNumber > 3) {
+            System.out.println("Invalid area selected. Please select 1, 2, or 3.");
+            chosenAreaNumber = scanner.nextInt(); // Read user input again if invalid
+        }
+
+        System.out.println("Select position within the 2x2 grid where you want to place the pressure:");
+        System.out.println("1: Top-Left, 2: Top-Right, 3: Bottom-Left, 4: Bottom-Right");
+        int positionInGrid = scanner.nextInt(); // Read user input for specific position
+
+        // Validate chosen position
+        while (positionInGrid < 1 || positionInGrid > 4) {
+            System.out.println("Invalid position selected. Please select between 1 and 4.");
+            positionInGrid = scanner.nextInt(); // Read user input again if invalid
+        }
+
+        placeCardInArea(chosenAreaNumber, pressure, positionInGrid); // Pass both choices to the placement method
+    }
+
+    // Updated to include specific position selection
+    public void placeCardInArea(int chosenAreaNumber, int pressure, int positionInGrid) {
+        String pressureAsString = String.valueOf(pressure); //Convert pressure to string
+        // Assume chosenAreaNumber = 1 (Bottom Left), and positionInGrid = 4 (Bottom-Right within the 2x2 grid)
+        int baseRow = 6; // Starting row for bottom grids
+        int baseCol; // This will be set based on the chosen area
+
+        switch (chosenAreaNumber) {
+            case 1: baseCol = 1; break; // Bottom Left grid
+            case 2: baseCol = 4; break; // Bottom Middle grid
+            case 3: default: baseCol = 7; break; // Bottom Right grid
+        }
+
+// Adjust for position within the 2x2 grid
+        if (positionInGrid == 2) baseCol++; // Top-Right: Increase column
+        else if (positionInGrid == 3) baseRow++; // Bottom-Left: Increase row
+        else if (positionInGrid == 4) { baseRow++; baseCol++; } // Bottom-Right: Increase both
+
+// Now baseRow and baseCol point to the exact cell to update
+        setElement(baseRow, baseCol, pressureAsString);
+        showBoard(); // Show the updated board after placing the card.
+    }
+
+
+    ///////////////////////////////////////////////////////
+
+
 
     // Getters for sums of fields (to compare to diamonds)
 

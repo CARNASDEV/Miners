@@ -20,28 +20,45 @@ public class GameEngine {
 
 
 
+
     //By passing board into startGame I'm making it accessible to change throughout the progress of the game.
     public static void startGame(Board board, Player player1, Player player2){
         //We got names, decks and a hand (Player's constructor)
         //Board has Diamonds (Board Constructor)
         //TODO: Let's give an introduction in text and a first view of the board. Prompt Player 1 to be the one by the screen.
         boolean gameActive = true;
+        Player currentPlayer = player1; // Start with player1
 
         while (gameActive) {
             // Print board p1POV (default)
             board.showBoard();
-            System.out.println("It's "+player1.getName()+"'s turn. Make sure "+player2.getName()+" can't see the screen!");
+            System.out.println("It's " + currentPlayer.getName() + "'s turn. Make sure the other player can't see the screen!");
             System.out.println("Press Enter when you're ready!");
             scanner.nextLine();
 
+            // Print the current player's hand
+            System.out.println("You've drawn the following 5 cards " + currentPlayer.getName() + ", here's your hand:");
+            currentPlayer.getPlayerHand().printCards();
+
+            Card selectedCard = currentPlayer.getPlayerHand().selectCard();
+            System.out.println("You've selected: " + selectedCard);
+
+            
+            System.out.println("Choose where you'd like to place your card.");
             board.showBoard();
-            System.out.println(player1.getPlayerHand().getHand()); //funkar???
+            board.askForPlacement(selectedCard.getPressure());
+            //Now there needs to be some kind of coordinate selection as to which 12 spaces i want to use...
+            // 1. Ask them to choose between "bottom left," "bottom middle," and "bottom right,".
+
 
 
             //TODO: Mechanism to pick a card from hand
             //TODO: Mechanism to pick the field on the board
             //TODO: Mechanism to send the chosen card object to the right field on the board.
 
+            //TODO: Carro söndags
+            // Mechanism to switch players?
+            //currentPlayer = (currentPlayer == player1) ? player2 : player1;
 
             //Check "win conditions"
             Rules.checkIfPlayerGetsADiamond(board, player1, player2);
