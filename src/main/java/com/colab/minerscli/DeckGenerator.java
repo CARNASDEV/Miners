@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class DeckJSON {
+public class DeckGenerator {
     private List<Card> cardPool;
     public List<Card> deck;
 
-    public DeckJSON() {
+    public DeckGenerator() {
         cardPool = new ArrayList<>();
         initializeCardPool("cards.json");
         this.deck = generateDeck();

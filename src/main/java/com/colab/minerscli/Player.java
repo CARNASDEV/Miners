@@ -5,18 +5,22 @@ import java.util.List;
 
 public class Player {
     private String name;
-    private DeckJSON dj;
+    private DeckGenerator deckGenerator;
     private List<Card> deck;
     private PlayerHand playerHand;
     private int diamondsRewarded = 0;
+    private int id;
+    private int roundsPlayed;
 
 
-    public Player(String name) {
+    public Player(String name, int id) {
         this.name = name;
-        dj = new DeckJSON();
-        this.deck = dj.generateDeck();
+        deckGenerator = new DeckGenerator();
+        this.deck = deckGenerator.generateDeck();
         this.playerHand = new PlayerHand();
         this.diamondsRewarded = 0;
+        this.roundsPlayed = 0;
+        this.id = id;
         drawHand();
     }
 
@@ -46,12 +50,12 @@ public class Player {
         this.name = name;
     }
 
-    public DeckJSON getDeck() {
-        return dj;
+    public DeckGenerator getDeck() {
+        return deckGenerator;
     }
 
-    public void setDeck(DeckJSON deck) {
-        this.dj = deck;
+    public void setDeck(DeckGenerator deck) {
+        this.deckGenerator = deck;
     }
 
     public PlayerHand getPlayerHand() {
@@ -65,5 +69,12 @@ public class Player {
     public int getDiamondsRewarded() { return diamondsRewarded; }
 
     public void setDiamondsRewarded(int diamondsRewarded) {this.diamondsRewarded = diamondsRewarded;}
+
+    public int getRoundsPlayed() {return roundsPlayed;}
+
+    public void setRoundsPlayed(int roundsPlayed) {this.roundsPlayed = roundsPlayed;}
+
+    public int getId () {return id;}
+    public void setId(int id) {this.id = id;}
 
 }

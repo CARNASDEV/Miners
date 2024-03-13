@@ -54,13 +54,13 @@ public class Menu {
         // Choose player 1 name
         System.out.print("Enter the name of Player 1: ");
         String name1 = scanner.nextLine();
-        Player player1 = new Player(name1);
+        Player player1 = new Player(name1, 1);
         
 
         // Choose player 2 name
         System.out.print("Enter the name of Player 2: ");
         String name2 = scanner.nextLine();
-        Player player2 = new Player(name2);
+        Player player2 = new Player(name2, 2);
 
         // Create an instance of GameEngine
         GameEngine gameEngine = new GameEngine(player1, player2);

@@ -20,9 +20,9 @@ public class GameEngine {
         startGame(board, player1, player2); //See comment in startGame
     }
 
-
+// Player 1 goes always first (0=0), there is no option for Player 2 to have more rounds.
     private Player switchCurrentPlayer(Player player1, Player player2) {
-        return (currentPlayer == player1) ? player2 : player1;
+        return (player1.getRoundsPlayed() == player2.getRoundsPlayed()) ? player1 : player2;
     }
 
     //By passing board into startGame I'm making it accessible to change throughout the progress of the game.
@@ -30,18 +30,21 @@ public class GameEngine {
         boolean gameActive = true;
         while (gameActive) {
 
-            gameLoop(board, switchCurrentPlayer(player1, player2));
+            gameTurn(board, switchCurrentPlayer(player1, player2));
+            gameTurn(board, switchCurrentPlayer(player1, player2));
             player1.drawCard();
             player2.drawCard();
         }
 
     }
 
-    public void gameLoop(Board board, Player currentPlayer) {
+    public void gameTurn(Board board, Player currentPlayer) {
 
         System.out.println("It's " + currentPlayer.getName() + "'s turn. Make sure the other player can't see the screen!");
         System.out.println("Press Enter when you're ready!");
         scanner.nextLine();
+
+        board.showBoard();
 
         // Print the current player's hand
         System.out.println("You've drawn cards " + currentPlayer.getName() + ", here's your hand:");
@@ -50,11 +53,20 @@ public class GameEngine {
         Card selectedCard = currentPlayer.getPlayerHand().selectCard();
         System.out.println("You've selected: " + selectedCard);
 
+        // if (currentPlayer.getId()==1){
+        //            selectedCardPlayer1 = currentPlayer.getPlayerHand().selectCard();
+        //            System.out.println("You've selected: " + selectedCardPlayer1);}
+        //        else{
+        //            selectedCardPlayer2 =currentPlayer.getPlayerHand().selectCard();
+        //            System.out.println("You've selected: " + selectedCardPlayer2);
+        //        }
+
+
         // 1. Ask player to choose between "bottom left," "bottom middle," and "bottom right".
         // 2. Afterwards, ask where in the 2x2 square to place selected card.
         System.out.println("Choose where you'd like to place your card.");
         board.showBoard();
-        board.askForPlacement(selectedCard.getPressure());
+        board.askForPlacement(selectedCard.getPressure(), currentPlayer);
         // Player1 has now placed their card.
 
 

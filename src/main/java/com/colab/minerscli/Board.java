@@ -16,13 +16,13 @@ public class Board {
         // Initialize boardTemplate as a nested ArrayList
         boardTemplate = new ArrayList<>();
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array0
-        boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array1
+        boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-", "Player 2"))); // array1
         boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array2
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array3
         boardTemplate.add(new ArrayList<>(List.of("-", "2", "1", "-", "2", "1", "-", "2", "1", "-"))); // array4 : diamonds
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array5
         boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array6
-        boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-"))); // array7
+        boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-", "Player 1"))); // array7
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array8
 
         Diamond d1 = new Diamond();
@@ -60,10 +60,14 @@ public class Board {
     ////////////////////////////////////////////////////////////////////////////
     // New method to ask for placement
     // Modified method to ask for specific placement within the 2x2 area
-    public void askForPlacement(int pressure) {
+    public void askForPlacement(int pressure, Player currentplayer) {
         Scanner scanner = new Scanner(System.in); // Reuse existing scanner if you can pass it as a parameter
         System.out.println("Select a 2x2 grid-area where you would like to place your card:");
-        System.out.println("1: Bottom Left, 2: Bottom Middle, 3: Bottom Right");
+
+        System.out.println(currentplayer.getId());
+        if (currentplayer.getId() == 1) {System.out.println("1: Bottom Left, 2: Bottom Middle, 3: Bottom Right");
+        } else {System.out.println("1: Top Left, 2: Top Middle, 3: Top Right");}
+
         int chosenAreaNumber = scanner.nextInt(); // Read user input for area
 
         // Validate chosen area
@@ -82,31 +86,46 @@ public class Board {
             positionInGrid = scanner.nextInt(); // Read user input again if invalid
         }
 
-        placeCardInArea(chosenAreaNumber, pressure, positionInGrid); // Pass both choices to the placement method
+        placeCardInArea(chosenAreaNumber, pressure, positionInGrid, currentplayer); // Pass both choices to the placement method
     }
 
     // Updated to include specific position selection
-    public void placeCardInArea(int chosenAreaNumber, int pressure, int positionInGrid) {
+    public void placeCardInArea(int chosenAreaNumber, int pressure, int positionInGrid, Player currentPlayer) {
         String pressureAsString = String.valueOf(pressure); //Convert pressure to string
         // Assume chosenAreaNumber = 1 (Bottom Left), and positionInGrid = 4 (Bottom-Right within the 2x2 grid)
-        int baseRow = 6; // Starting row for bottom grids
-        int baseCol; // This will be set based on the chosen area
+        // Starting row for bottom grids
+        int baseRow;
+        if (currentPlayer.getId() == 1) {baseRow = 6;}
+            else {baseRow = 1;}
 
-        switch (chosenAreaNumber) {
-            case 1: baseCol = 1; break; // Bottom Left grid
-            case 2: baseCol = 4; break; // Bottom Middle grid
-            case 3: default: baseCol = 7; break; // Bottom Right grid
-        }
+            int baseCol; // This will be set based on the chosen area
+
+            switch (chosenAreaNumber) {
+                case 1:
+                    baseCol = 1;
+                    break; // Bottom Left grid
+                case 2:
+                    baseCol = 4;
+                    break; // Bottom Middle grid
+                case 3:
+                default:
+                    baseCol = 7;
+                    break; // Bottom Right grid
+            }
 
 // Adjust for position within the 2x2 grid
-        if (positionInGrid == 2) baseCol++; // Top-Right: Increase column
-        else if (positionInGrid == 3) baseRow++; // Bottom-Left: Increase row
-        else if (positionInGrid == 4) { baseRow++; baseCol++; } // Bottom-Right: Increase both
+            if (positionInGrid == 2) baseCol++; // Top-Right: Increase column
+            else if (positionInGrid == 3) baseRow++; // Bottom-Left: Increase row
+            else if (positionInGrid == 4) {
+                baseRow++;
+                baseCol++;
+            } // Bottom-Right: Increase both
 
 // Now baseRow and baseCol point to the exact cell to update
-        setElement(baseRow, baseCol, pressureAsString);
-        showBoard(); // Show the updated board after placing the card.
-    }
+            setElement(baseRow, baseCol, pressureAsString);
+            showBoard(); // Show the updated board after placing the card.
+        }
+
 
 
     ///////////////////////////////////////////////////////
@@ -156,107 +175,4 @@ public class Board {
                Integer.parseInt(boardTemplate.get(7).get(7)) +
                Integer.parseInt(boardTemplate.get(7).get(8));
     }
-
-    // Specific field access methods
-
-    public void setElement11(String value) {
-        setElement(1, 1, value);
-    }
-
-    public void setElement12(String value) {
-        setElement(1, 2, value);
-    }
-
-    public void setElement14(String value) {
-        setElement(1, 4, value);
-    }
-
-    public void setElement15(String value) {
-        setElement(1, 5, value);
-    }
-
-    public void setElement17(String value) {
-        setElement(1, 7, value);
-    }
-
-    public void setElement18(String value) {
-        setElement(1, 8, value);
-    }
-
-    public void setElement21(String value) {
-        setElement(2, 1, value);
-    }
-
-    public void setElement22(String value) {
-        setElement(2, 2, value);
-    }
-
-    public void setElement24(String value) {
-        setElement(2, 4, value);
-    }
-
-    public void setElement25(String value) {
-        setElement(2, 5, value);
-    }
-
-    public void setElement27(String value) {
-        setElement(2, 7, value);
-    }
-
-    public void setElement28(String value) {
-        setElement(2, 8, value);
-    }
-
-    public void setElement61(String value) {
-        setElement(6, 1, value);
-    }
-
-    public void setElement62(String value) {
-        setElement(6, 2, value);
-    }
-
-    public void setElement64(String value) {
-        setElement(6, 4, value);
-    }
-
-    public void setElement65(String value) {
-        setElement(6, 5, value);
-    }
-
-    public void setElement67(String value) {
-        setElement(6, 7, value);
-    }
-
-    public void setElement68(String value) {
-        setElement(6, 8, value);
-    }
-
-    public void setElement71(String value) {
-        setElement(7, 1, value);
-    }
-
-    public void setElement72(String value) {
-        setElement(7, 2, value);
-    }
-
-    public void setElement74(String value) {
-        setElement(7, 4, value);
-    }
-
-    public void setElement75(String value) {
-        setElement(7, 5, value);
-    }
-
-    public void setElement76(String value) {
-        setElement(7, 6, value);
-    }
-
-    public void setElement77(String value) {
-        setElement(7, 7, value);
-    }
-
-    public void setElement78(String value) {
-        setElement(7, 8, value);
-    }
-    
 }

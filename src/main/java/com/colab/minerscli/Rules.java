@@ -65,6 +65,17 @@ public class Rules {
         // TODO: Add functionality to move troops to other fields.
 
     }
+    //       p2      p1
+    //d1 = topleft bottomleft
+    //d2 = topmid bottommid
+    //d3 = topright bottomright
+    public static void allowPlayerToMoveMinersIfTheDiamondIsDestroyed(Board board, Player p1, Player p2){
+        if (board.d1.density == 0){
+            if (board.getFieldTopLeft()>21){
+
+            }
+        }
+    }
 
     public static void checkWinConditionsIfAllDiamondsAreGone(Board board, Player p1, Player p2) {
         //       p2      p1
