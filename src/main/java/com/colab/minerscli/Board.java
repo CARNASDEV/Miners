@@ -60,7 +60,7 @@ public class Board {
     ////////////////////////////////////////////////////////////////////////////
     // New method to ask for placement
     // Modified method to ask for specific placement within the 2x2 area
-    public void askForPlacement(int pressure, Player currentplayer) {
+    public Pocket askForPlacement(int pressure, Player currentplayer) {
         Scanner scanner = new Scanner(System.in); // Reuse existing scanner if you can pass it as a parameter
         System.out.println("Select a 2x2 grid-area where you would like to place your card:");
 
@@ -85,22 +85,21 @@ public class Board {
             System.out.println("Invalid position selected. Please select between 1 and 4.");
             positionInGrid = scanner.nextInt(); // Read user input again if invalid
         }
-
-        placeCardInArea(chosenAreaNumber, pressure, positionInGrid, currentplayer); // Pass both choices to the placement method
+        return new Pocket(chosenAreaNumber, pressure, positionInGrid); // Pass both choices to the placement method
     }
 
     // Updated to include specific position selection
-    public void placeCardInArea(int chosenAreaNumber, int pressure, int positionInGrid, Player currentPlayer) {
-        String pressureAsString = String.valueOf(pressure); //Convert pressure to string
+    public void placeCardInArea(Player cp) {
+        String pressureAsString = String.valueOf(cp.getPocket().getPressure()); //Convert pressure to string
         // Assume chosenAreaNumber = 1 (Bottom Left), and positionInGrid = 4 (Bottom-Right within the 2x2 grid)
         // Starting row for bottom grids
         int baseRow;
-        if (currentPlayer.getId() == 1) {baseRow = 6;}
-            else {baseRow = 1;}
+        if (cp.getId() == 1) {baseRow = 6;}
+                        else {baseRow = 1;}
 
             int baseCol; // This will be set based on the chosen area
 
-            switch (chosenAreaNumber) {
+            switch (cp.getPocket().getChosenAreaNumber()) {
                 case 1:
                     baseCol = 1;
                     break; // Bottom Left grid
@@ -114,9 +113,9 @@ public class Board {
             }
 
 // Adjust for position within the 2x2 grid
-            if (positionInGrid == 2) baseCol++; // Top-Right: Increase column
-            else if (positionInGrid == 3) baseRow++; // Bottom-Left: Increase row
-            else if (positionInGrid == 4) {
+            if (cp.getPocket().getPositionInGrid() == 2) baseCol++; // Top-Right: Increase column
+            else if (cp.getPocket().getPositionInGrid() == 3) baseRow++; // Bottom-Left: Increase row
+            else if (cp.getPocket().getPositionInGrid() == 4) {
                 baseRow++;
                 baseCol++;
             } // Bottom-Right: Increase both
@@ -125,12 +124,7 @@ public class Board {
             setElement(baseRow, baseCol, pressureAsString);
             showBoard(); // Show the updated board after placing the card.
         }
-
-
-
-    ///////////////////////////////////////////////////////
-
-
+        ///////////////////////////////////////////////////////
 
     // Getters for sums of fields (to compare to diamonds)
 

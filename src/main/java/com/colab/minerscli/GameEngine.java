@@ -17,7 +17,8 @@ public class GameEngine {
         this.player2 = player2;
         //this.currentPlayer = player1; // Gjorde om så att konstruktören settar default player1 som börjar
         Board board = new Board();
-        startGame(board, player1, player2); //See comment in startGame
+        Board boardHolo = new Board();
+        startGame(board, boardHolo, player1, player2); //See comment in startGame
     }
 
 // Player 1 goes always first (0=0), there is no option for Player 2 to have more rounds.
@@ -26,25 +27,32 @@ public class GameEngine {
     }
 
     //By passing board into startGame I'm making it accessible to change throughout the progress of the game.
-    public void startGame(Board board, Player player1, Player player2) {
+    public void startGame(Board board, Board boardHolo, Player player1, Player player2) {
         boolean gameActive = true;
         while (gameActive) {
 
-            gameTurn(board, switchCurrentPlayer(player1, player2));
-            gameTurn(board, switchCurrentPlayer(player1, player2));
+            gameTurn(board, boardHolo, switchCurrentPlayer(player1, player2));
+            gameTurn(board, boardHolo, switchCurrentPlayer(player1, player2));
+            //some conditions (Rules)
+            board.placeCardInArea(player1);
+            board.placeCardInArea(player2);
+
             player1.drawCard();
             player2.drawCard();
+
+
+
         }
 
     }
 
-    public void gameTurn(Board board, Player currentPlayer) {
+    public void gameTurn(Board board, Board boardHolo, Player currentPlayer) {
 
         System.out.println("It's " + currentPlayer.getName() + "'s turn. Make sure the other player can't see the screen!");
         System.out.println("Press Enter when you're ready!");
         scanner.nextLine();
 
-        board.showBoard();
+        boardHolo.showBoard();
 
         // Print the current player's hand
         System.out.println("You've drawn cards " + currentPlayer.getName() + ", here's your hand:");
@@ -53,33 +61,17 @@ public class GameEngine {
         Card selectedCard = currentPlayer.getPlayerHand().selectCard();
         System.out.println("You've selected: " + selectedCard);
 
-        // if (currentPlayer.getId()==1){
-        //            selectedCardPlayer1 = currentPlayer.getPlayerHand().selectCard();
-        //            System.out.println("You've selected: " + selectedCardPlayer1);}
-        //        else{
-        //            selectedCardPlayer2 =currentPlayer.getPlayerHand().selectCard();
-        //            System.out.println("You've selected: " + selectedCardPlayer2);
-        //        }
-
 
         // 1. Ask player to choose between "bottom left," "bottom middle," and "bottom right".
         // 2. Afterwards, ask where in the 2x2 square to place selected card.
         System.out.println("Choose where you'd like to place your card.");
         board.showBoard();
-        board.askForPlacement(selectedCard.getPressure(), currentPlayer);
-        // Player1 has now placed their card.
-
-
-
-        //Check "win conditions"
+        currentPlayer.setPocket(board.askForPlacement(selectedCard.getPressure(), currentPlayer));
+        //place to imaginary board for Rules
         Rules.checkIfPlayerGetsADiamond(board, player1, player2);
         Rules.checkIfDiamondIsDestroyed(board, player1, player2);
         Rules.checkWinConditionsIfAllDiamondsAreGone(board, player1, player2);
 
-        //WIN CONDITIONS:////////////////////////////////////////////////////////////////////////////////////////////
-        //Check win conditions (if a player has 21 points within one field on their side, they get the diamond responding to that field,
-        //if they have more than 21, the diamond gets destroyed and they can change the placement of miners working on that field to another field). [Based on the comparison of the Diamonds density and the sum of fields (methods in Board)
-        //if they have an equal amount of diamonds or none at all (which still is equal) the one with the least pressure on the field wins.
-        //Game either ends or continues
+
     }
 }

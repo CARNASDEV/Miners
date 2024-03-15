@@ -11,6 +11,7 @@ public class Player {
     private int diamondsRewarded = 0;
     private int id;
     private int roundsPlayed;
+    private Pocket pocket;
 
 
     public Player(String name, int id) {
@@ -18,6 +19,7 @@ public class Player {
         deckGenerator = new DeckGenerator();
         this.deck = deckGenerator.generateDeck();
         this.playerHand = new PlayerHand();
+        this.pocket = new Pocket();
         this.diamondsRewarded = 0;
         this.roundsPlayed = 0;
         this.id = id;
@@ -76,5 +78,8 @@ public class Player {
 
     public int getId () {return id;}
     public void setId(int id) {this.id = id;}
+
+    public Pocket getPocket () {return pocket;}
+    public void setPocket(Pocket pocket) {this.pocket = pocket;}
 
 }
