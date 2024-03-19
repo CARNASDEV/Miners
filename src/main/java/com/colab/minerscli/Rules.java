@@ -64,6 +64,8 @@ public class Rules {
 
         // TODO: Add functionality to move troops to other fields.
 
+
+
     }
     //       p2      p1
     //d1 = topleft bottomleft

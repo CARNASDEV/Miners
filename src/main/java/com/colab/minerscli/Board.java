@@ -25,9 +25,9 @@ public class Board {
         boardTemplate.add(new ArrayList<>(List.of("-", "0", "0", "-", "0", "0", "-", "0", "0", "-", "Player 1"))); // array7
         boardTemplate.add(new ArrayList<>(Collections.nCopies(10, "-"))); // array8
 
-        Diamond d1 = new Diamond();
-        Diamond d2 = new Diamond();
-        Diamond d3 = new Diamond();
+         d1 = new Diamond();
+         d2 = new Diamond();
+         d3 = new Diamond();
     }
 
 
@@ -40,6 +40,8 @@ public class Board {
             System.out.println();
         }
     }
+
+
     public void showBoardPlayer2Perspective() {
         Collections.reverse(boardTemplate);
         showBoard();

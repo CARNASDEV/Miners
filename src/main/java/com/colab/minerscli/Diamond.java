@@ -3,6 +3,6 @@ package com.colab.minerscli;
 public class Diamond {
 public int density;
     public Diamond(){
-      int density = 21;
+      this.density = 21;
     }
 }

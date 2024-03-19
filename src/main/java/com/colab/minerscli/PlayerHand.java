@@ -40,7 +40,7 @@ public class PlayerHand {
                 System.out.println("That's not a valid number. Please try again.");
             }
         }
-        return hand.get(cardIndex - 1); // Adjust for 0-based indexing
+        return hand.remove(cardIndex - 1); // Adjust for 0-based indexing
     }
 
     public void printCards() {

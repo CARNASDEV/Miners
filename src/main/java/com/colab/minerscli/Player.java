@@ -35,12 +35,17 @@ public class Player {
             playerHand.addCard(deck.remove(0));}
     }
 
+
+
     //*Draws 5 deck in the beggining of the game.
     public void drawHand(){
         for (int i = 0; i <= 4; i++) {
             drawCard();
     }
 }
+    public void addRoundCount(){
+        this.roundsPlayed++;
+    }
 
     //GETSET:
 
