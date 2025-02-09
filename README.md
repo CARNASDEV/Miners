@@ -2,9 +2,21 @@
 
 A two-player strategic board game where players compete to mine diamonds by carefully placing miners and managing pressure across different fields.
 
+> **Note:** This game is currently under active development and is available on the `dev` branch. Some features may be incomplete or subject to change.
+
 ## Game Overview
 
 In Miners CLI, players take turns placing pressure cards on a 9x10 board divided into six mining fields (three for each player). The goal is to match the pressure in your fields with diamond densities while maintaining lower overall pressure than your opponent.
+
+## Development Status
+
+The game is currently in development, with several features still being implemented:
+- Miner redistribution after diamond destruction
+- Additional game balance adjustments
+- UI improvements
+- Bug fixes and optimization
+
+For the latest playable version, please use the `dev` branch. The main branch will be updated once the game reaches a stable release state.
 
 ## Game Board Layout
 
@@ -45,10 +57,15 @@ P1: [ ][ ][ ]  [ ][ ][ ]  [ ][ ][ ]  (Bottom Fields)
 
 ## Installation and Setup
 
-1. Ensure you have Java installed on your system
-2. Clone the repository
-3. Compile the Java files
-4. Run the main game file
+### Requirements
+- JDK 17 or higher
+
+### Installation Steps
+1. Clone the project repository
+2. Switch to the `dev` branch for the latest playable version
+3. Run the main program from your IDE
+
+That's it! No additional setup or configuration required.
 
 ## Classes Overview
 
@@ -60,7 +77,7 @@ P1: [ ][ ][ ]  [ ][ ][ ]  [ ][ ][ ]  (Bottom Fields)
 
 ## Contributing
 
-Feel free to submit issues and enhancement requests.
+Feel free to submit issues and enhancement requests. As the game is still in development, feedback and contributions are welcome!
 
 ## License
 
