@@ -11,6 +11,8 @@ In Miners CLI, players take turns placing pressure cards on a 9x10 board divided
 ## Development Status
 
 The game is currently in development, with several features still being implemented:
+-Currently, the game includes a check for whether any 2x2 grid on the board reaches a total pressure of 21. However, this check is not being actively applied during gameplay as of this version.
+To fix this, ensure the `checkFor21Pressure()` method is called after each card placement, and implement logic to handle the event (e.g., awarding a diamond) when the check returns `true`.
 - Miner redistribution after diamond destruction
 - Additional game balance adjustments
 - UI improvements
