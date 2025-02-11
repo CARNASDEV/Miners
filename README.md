@@ -81,6 +81,6 @@ That's it! No additional setup or configuration required.
 
 Feel free to submit issues and enhancement requests. As the game is still in development, feedback and contributions are welcome!
 
-## License
+## Credits
 
-[Specify your license here]
+Developed by CarolinaMCorreia and JavaByDawn.
